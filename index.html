@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+
+<head>
+	<title>Snaclops</title>
+	<script src="snaclops.js" type="text/javascript"></script>
+	<script src="snake.js" type="text/javascript"></script>
+	<script src="snakecell.js" type="text/javascript"></script>
+	<script src="snakefruit.js" type="text/javascript"></script>
+	<link rel="stylesheet" type="text/css" href="snastyle.css">
+	<link href="https://fonts.googleapis.com/css?family=Cabin" rel="stylesheet">
+</head>
+<html lang="en">
+	<body>
+		<table id="boxes">
+			<tr>
+				<td class="filler">
+					&copy; 2018 Adam Aaronson
+				</td>
+				<td id="header-stuff">
+					<div id="logo-stuff">
+						<div id="eye-image"></div>
+						<img id="logo-image" src="sprites/snaclopslogo.png" alt="Snaclops" width="480">
+					</div>
+					<table id="scores">
+						<tr>
+							<td>
+								<h2>High Score</h2>
+							</td>
+							<td>
+								<h1>Score</h1>
+							</td>
+							<td>
+								<h2>Fruit Basket</h2>
+							</td>
+						</tr>
+						<tr>
+							<td class="score-display">
+								<img src="sprites/crown.png">
+								<span class="score-num" id="high-score">0<span>
+							</td>
+							<td class="score-display">
+								<img src="sprites/fruitred.png">
+								<span class="score-num" id="score">0<span>
+							</td>
+							<td class="score-display">
+								<img src="sprites/basket.png" id="basket-image">
+								<span class="score-num" id="fruit-basket">0</span>
+							</td>
+						</tr>
+						<tr>
+							<td colspan="3" id="game-messages">
+								<span id="game-over"></span>
+								<span id="game-message">Press Space to Begin!</span>
+							</td>
+						</tr>
+					</table>
+				</td>
+				<td class="filler">
+					dotadam.com
+				</td>
+			</tr>
+			<tr id="main-boxes">
+				<td class="sidebar" id="stats">
+					<div class="side-header-box" id="menu-header-box">
+						<h1>Menu</h1>
+						<h2>Change speed and view stats!</h2>
+					</div>
+					<div id="menu-body">
+						<h1>Speed</h1>
+						<h2>Faster speed increases chances of better fruits!</h2>
+						<div id="speeds">
+							<a class="speed-button"
+							   id="speed-slow" 
+							   onclick="speedButtonClick(this)"
+							   onmouseover="speedButtonIn(this)"
+							   onmouseout="speedButtonOut(this)"
+							   href="javascript:void(0)">Slow</a>
+							<a class="speed-button"
+							   id="speed-slither" 
+							   onclick="speedButtonClick(this)"
+							   onmouseover="speedButtonIn(this)"
+							   onmouseout="speedButtonOut(this)"
+							   href="javascript:void(0)">Slither</a>
+							<div class="speed-caption">
+								<img src="sprites/crown.png">
+								<div class="speed-score">50</div>
+							</div>
+							<a class="speed-button"
+							   id="speed-sprint" 
+							   onclick="speedButtonClick(this)"
+							   onmouseover="speedButtonIn(this)"
+							   onmouseout="speedButtonOut(this)"
+							   href="javascript:void(0)">Sprint</a>
+							<div class="speed-caption">
+								<img src="sprites/crown.png">
+								<div class="speed-score">100</div>
+							</div>
+						</div>
+
+						<h1>Stats</h1>
+						<div id="stats">
+							<h2>Fruit varieties collected</h2>
+							<div id="fruit-varieties">
+								<div class="fruit-variety">
+									<img class="fruit-icon">
+									<span class="fruit-number">0</span>
+								</div>
+							</div>
+							<div class="stat" id="total-fruits">
+								Total: 0
+							</div>
+
+							<h3>High scores</h3>
+							<div class="stat high-score-stat" id="high-score-slow">
+								Slow: 0
+							</div>
+							<div class="stat high-score-stat" id="high-score-slither">
+								Slither: 0
+							</div>
+							<div class="stat high-score-stat" id="high-score-sprint">
+								Sprint: 0
+							</div>
+
+							<h3>Game stats</h3>
+							<div class="stat" id="total-fruit-points">
+								Total Score: 0
+							</div>
+							<div class="stat" id="games-played">
+								Games Played: 0
+							</div>
+						</div>
+					</div>
+				</td>
+				<td id="snake-cell">
+					<canvas id="snake" height="480px" width="480px"></canvas>
+				</td>
+				<td class="sidebar" id="shop">
+					<div class="side-header-box" id="shop-header-box">
+						<h1>Shop</h1>
+						<h2>Spend the fruits in your basket!</h2>
+						<h3 id="snake-count">0/9</h3>
+					</div>
+					<div id="shop-body">
+						<ul id="snake-list">
+							<li id="first-snake">
+								<div class="shop-column">
+									<div class="snake-and-eye">
+										<div class="eye-icon"></div>
+										<div class="snake-icon"></div>
+									</div>
+								</div>
+								<div class="shop-column">
+									<div class="snake-name">Yellow</div>
+									<a class="snake-button" onclick="snakeButtonClick(this)" onmouseover="snakeButtonIn(this)" onmouseout="snakeButtonOut(this)" href="javascript:void(0)">
+										USING
+									</a>
+								</div>
+							</li>
+						</ul>
+					</div>
+				</td>
+			</tr>
+		</table>
+	</body>
+</html>

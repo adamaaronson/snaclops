@@ -1,0 +1,319 @@
+/* Icons by lipi from the Noun Project */
+
+body {
+	background-color: #111;
+	font-family: Cabin, sans-serif;
+	text-align: center;
+}
+
+#boxes {
+	display: inline-block;
+	border-collapse: collapse;
+}
+
+/* HEADER */
+
+#header-stuff {
+	max-width: 480px;
+	border: 10px solid #FD0;
+}
+
+#logo-stuff {
+	position: relative;
+	height: 130px;
+}
+
+#logo-image {
+	top: 0px;
+	left: 0px;
+	position: absolute;
+	z-index: 2;
+}
+
+#eye-image {
+	background: url("sprites/snakeyellow.png") -112px -336px;
+	background-size: 336px 448px;
+	width: 112px;
+	height: 112px;
+	top: 20px;
+	left: 20px;
+	position: absolute;
+	z-index: 1;
+}
+
+#scores {
+	width: 100%;
+	color: white;
+	border-collapse: collapse;
+}
+
+#scores td {
+	width: 33.333%;
+	padding-top: 10px;
+	text-align: center;
+	vertical-align: baseline;
+}
+
+#scores h1, h2 {
+	padding: 0;
+	margin: 0;
+	font-weight: normal;
+}
+
+.score-display img {
+	width: 30px;
+	vertical-align: middle;
+}
+
+.score-num {
+	vertical-align: middle;
+	font-size: 2em;
+	text-align: left;
+}
+
+#game-messages {
+	padding: 10px;
+	font-size: 1.6em;
+}
+
+#game-message {
+	color: #FD0;
+}
+
+#game-over {
+	color: #E20;
+}
+
+.filler {
+	color: #AAA;
+	vertical-align: bottom;
+	padding-bottom: 5px;
+	font-size: 0.9em;
+}
+
+/* MAIN BOXES */
+
+#main-boxes {
+	margin-top: -10px;
+}
+
+#main-boxes td {
+	border: 10px solid #FD0;
+}
+
+#snake {
+	margin: auto;
+	display: block;
+}
+
+#snake-cell {
+	padding: 0px;
+	min-width: 480px;
+	max-height: 480px;
+	text-align: center;
+	background-color: #DB0;
+}
+
+.sidebar {
+	position: relative;
+	width: 200px;
+	min-width: 200px;
+	vertical-align: top;
+	padding: 0px;
+	margin: 0px;
+	max-height: 480px;
+}
+
+.side-header-box h1 {
+	position: relative;
+	display: inline-block;
+	background-color: #FD0;
+	color: #111;
+	font-size: 2em;
+	font-weight: bold;
+	width: 100%;
+	margin: 0;
+}
+
+.side-header-box h2 {
+	color: #111;
+	font-size: 0.9em;
+	background-color: #FD0;
+	padding-bottom: 8px;
+	margin: 0;
+}
+
+.side-header-box h3 {
+	color: white;
+	font-size: 1em;
+	background-color: #333;
+	padding: 3px 0px;
+	margin: 0;
+}
+
+/* MENU */
+
+#menu-body {
+	overflow-y: scroll;
+	max-height: 420px;
+	text-align: left;
+	padding-left: 20px;
+}
+
+#menu-body h1 {
+	color: white;
+	margin-top: 20px;
+	margin-bottom: 5px;
+	font-weight: normal;
+	font-size: 1.5em;
+}
+
+#menu-body h2, h3 {
+	color: #FD0;
+	font-weight: normal;
+	font-size: 0.9em;
+	margin-bottom: 5px;
+	margin-top: 5px;
+}
+
+#menu-body h3 {
+	margin-top: 15px;
+}
+
+#speeds {
+	margin-top: 10px;
+}
+
+.speed-button {
+	display: inline-block;
+	width: 40%;
+	color: #111;
+	text-decoration: none;
+	margin-bottom: 4px;
+	padding: 3px 0px 3px 10px;
+	border-radius: 9999px;
+	-moz-border-radius: 9999px;
+	-webkit-border-radius: 9999px;
+}
+
+#speed-slow {
+	background-color: #FD0;
+	display: block !important;
+}
+
+#speed-slither {
+	background-color: #CCC;
+	/*background-color: #F81;*/
+}
+
+#speed-sprint {
+	background-color: #CCC;
+	/*background-color: #F42;*/
+}
+
+.speed-caption {
+	margin-left: 5px;
+	display: inline-block;
+	color: white;
+	font-size: 1.1em;
+}
+
+.speed-caption img {
+	vertical-align: middle;
+	width: 1em;
+}
+
+.speed-score {
+	display: inline-block;
+	vertical-align: middle;
+}
+
+.fruit-number {
+	color: white;
+	font-size: 1.3em;
+	vertical-align: middle;
+}
+
+.fruit-icon {
+	width: 1.3em;
+	vertical-align: middle;
+}
+
+.stat {
+	font-size: 1.1em;
+	color: white;
+}
+
+#stats {
+	margin-bottom: 20px;
+}
+
+/* SHOP */
+
+#snake-list {
+	padding: 0;
+	margin: 0;
+	text-align: left;
+}
+
+#snake-list li {
+	display: table-row;
+}
+
+#shop-body {
+	overflow-y: scroll;
+	max-height: 420px;
+}
+
+.shop-column {
+	padding: 15px 0px 5px 0px;
+	display: table-cell;
+	vertical-align: middle;
+}
+
+.snake-and-eye {
+	position: relative;
+	width: 75px;
+	height: 50px;
+	margin-right: 10px;
+}
+
+.snake-icon {
+	background-image: url(sprites/snakeyellow.png);
+	background-size: 150px 200px;
+	background-position: -75px 0px;
+	width: 75px;
+	height: 50px;
+	position: absolute;
+	z-index: 1;
+}
+
+.eye-icon {
+	background-image: url(sprites/eye.png);
+	background-size: 50px 50px;
+	width: 50px;
+	height: 50px;
+	left: 25px;
+	position: absolute;
+	z-index: 2;
+	display: none;
+}
+
+.snake-name {
+	color: white;
+	font-size: 1.3em;
+}
+
+.snake-button {
+	background-color: #FD0;
+	color: #111;
+	font-size: 0.85em;
+	text-decoration: none;
+	padding: 3px 9px;
+	margin-top: 5px;
+	margin-bottom: 10px;
+	border-radius: 9999px;
+	-moz-border-radius: 9999px;
+	-webkit-border-radius: 9999px;
+	display: inline-block;
+}
