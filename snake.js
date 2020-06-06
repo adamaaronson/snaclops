@@ -31,7 +31,12 @@ const SNAKES = [
 	new Snake("Honeybee", "honeybee", 300),
 	new Snake("Tiger", "tiger", 400),
 	new Snake("Candy", "candy", 450),
-	new Snake("Rainbow", "rainbow", 500)
+	new Snake("Rainbow", "rainbow", 500),
+	new Snake("Neon", "neon", 800),
+	new Snake("Argon", "argon", 850),
+	new Snake("Krypton", "krypton", 900),
+	new Snake("Xenon", "xenon", 950),
+	new Snake("Phantom", "phantom", 1500)
 ];
 
 function getSnake(name) {
